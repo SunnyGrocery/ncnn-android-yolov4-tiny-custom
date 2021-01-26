@@ -1,0 +1,4 @@
+ninja: Entering directory `D:\Android\workSpace\ncnn-android-yolov4-tiny-custom\app\.cxx\cmake\debug\x86_64'
+[1/3] Building CXX object CMakeFiles/yolov4.dir/jni_interface.cpp.o
+[2/3] Building CXX object CMakeFiles/yolov4.dir/yolov4.cpp.o
+[3/3] Linking CXX shared library libyolov4.so

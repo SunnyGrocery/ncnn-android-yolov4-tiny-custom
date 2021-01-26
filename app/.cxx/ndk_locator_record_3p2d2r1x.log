@@ -1,0 +1,42 @@
+[
+  {
+    "level": "INFO",
+    "message": "android.ndkVersion from module build.gradle is not set"
+  },
+  {
+    "level": "INFO",
+    "message": "ndk.dir in local.properties is not set"
+  },
+  {
+    "level": "INFO",
+    "message": "ANDROID_NDK_HOME environment variable is not set"
+  },
+  {
+    "level": "INFO",
+    "message": "sdkFolder is D:\\Android\\AndroidSDK"
+  },
+  {
+    "level": "INFO",
+    "message": "Because no explicit NDK was requested, the default version \u002721.0.6113669\u0027 for this Android Gradle Plugin will be used"
+  },
+  {
+    "level": "INFO",
+    "message": "Considering D:\\Android\\AndroidSDK\\ndk-bundle in SDK ndk-bundle folder"
+  },
+  {
+    "level": "INFO",
+    "message": "Considering D:\\Android\\AndroidSDK\\ndk\\22.0.7026061 in SDK ndk folder"
+  },
+  {
+    "level": "INFO",
+    "message": "Rejected D:\\Android\\AndroidSDK\\ndk-bundle in SDK ndk-bundle folder because that location has no source.properties"
+  },
+  {
+    "level": "INFO",
+    "message": "Rejected D:\\Android\\AndroidSDK\\ndk\\22.0.7026061 in SDK ndk folder because that NDK had version 22.0.7026061 which didn\u0027t match the requested version 21.0.6113669"
+  },
+  {
+    "level": "ERROR",
+    "message": "No version of NDK matched the requested version 21.0.6113669. Versions available locally: 22.0.7026061"
+  }
+]

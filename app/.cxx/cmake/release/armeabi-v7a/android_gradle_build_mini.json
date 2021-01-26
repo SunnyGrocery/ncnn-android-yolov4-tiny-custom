@@ -1,0 +1,22 @@
+{
+  "buildFiles": [
+    "D:\\Android\\AndroidSDK\\ndk\\22.0.7026061\\build\\cmake\\android.toolchain.cmake",
+    "D:\\Android\\AndroidSDK\\ndk\\22.0.7026061\\build\\cmake\\platforms.cmake",
+    "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "D:\\Android\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\.cxx\\cmake\\release\\armeabi-v7a\" clean"
+  ],
+  "buildTargetsCommand": "D:\\Android\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\.cxx\\cmake\\release\\armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "yolov4-Release-armeabi-v7a": {
+      "artifactName": "yolov4",
+      "buildCommand": "D:\\Android\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\.cxx\\cmake\\release\\armeabi-v7a\" yolov4",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\.cxx\\cmake\\release\\armeabi-v7a\\libyolov4.so",
+      "runtimeFiles": [
+        "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\ncnn\\armeabi-v7a\\libncnn.a"
+      ]
+    }
+  }
+}

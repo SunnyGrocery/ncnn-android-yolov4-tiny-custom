@@ -1,0 +1,12 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe 
+Build flags: -g;-DANDROID;-fdata-sections;-ffunction-sections;-funwind-tables;-fstack-protector-strong;-no-canonical-prefixes;-D_FORTIFY_SOURCE=2;-Wformat;-Werror=format-security;
+Id flags:  
+
+The output was:
+1
+lld: error: unable to find library -lgcc_eh
+lld: error: unable to find library -lgcc_eh
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+

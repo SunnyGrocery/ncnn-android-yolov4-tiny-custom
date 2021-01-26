@@ -1,0 +1,21 @@
+Executable : D:\Android\AndroidSDK\cmake\3.10.2.4988404\bin\cmake.exe
+arguments : 
+-HD:\Android\workSpace\ncnn-android-yolov4-tiny-custom\app\src\main\cpp
+-DCMAKE_FIND_ROOT_PATH=D:\Android\workSpace\ncnn-android-yolov4-tiny-custom\app\.cxx\cmake\debug\prefab\armeabi-v7a\prefab
+-DCMAKE_BUILD_TYPE=Debug
+-DCMAKE_TOOLCHAIN_FILE=D:\Android\AndroidSDK\ndk\22.0.7026061\build\cmake\android.toolchain.cmake
+-DANDROID_ABI=armeabi-v7a
+-DANDROID_NDK=D:\Android\AndroidSDK\ndk\22.0.7026061
+-DANDROID_PLATFORM=android-24
+-DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a
+-DCMAKE_ANDROID_NDK=D:\Android\AndroidSDK\ndk\22.0.7026061
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=D:\Android\workSpace\ncnn-android-yolov4-tiny-custom\app\build\intermediates\cmake\debug\obj\armeabi-v7a
+-DCMAKE_MAKE_PROGRAM=D:\Android\AndroidSDK\cmake\3.10.2.4988404\bin\ninja.exe
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_SYSTEM_VERSION=24
+-BD:\Android\workSpace\ncnn-android-yolov4-tiny-custom\app\.cxx\cmake\debug\armeabi-v7a
+-GNinja
+jvmArgs : 
+
+Build command args:

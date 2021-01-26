@@ -1,0 +1,13 @@
+[
+{
+  "directory": "D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/.cxx/cmake/release/armeabi-v7a",
+  "command": "D:\\Android\\AndroidSDK\\ndk\\22.0.7026061\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi24 --gcc-toolchain=D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dyolov4_EXPORTS -ID:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/src/main/cpp/ncnnvulkan/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fopenmp -Oz -DNDEBUG  -fPIC   -o CMakeFiles\\yolov4.dir\\jni_interface.cpp.o -c D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\jni_interface.cpp",
+  "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\jni_interface.cpp"
+},
+
+{
+  "directory": "D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/.cxx/cmake/release/armeabi-v7a",
+  "command": "D:\\Android\\AndroidSDK\\ndk\\22.0.7026061\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi24 --gcc-toolchain=D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dyolov4_EXPORTS -ID:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/src/main/cpp/ncnnvulkan/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fopenmp -Oz -DNDEBUG  -fPIC   -o CMakeFiles\\yolov4.dir\\yolov4.cpp.o -c D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\yolov4.cpp",
+  "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\yolov4.cpp"
+}
+]

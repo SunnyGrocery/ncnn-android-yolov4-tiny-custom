@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Face Mask Detection</string>
+    <string name="copyright1">Model trained by AlexeyAB/darknet,which implemented the YOLOv4-tiny algorithm.</string>
+    <string name="copyright2">This project powered by Tencent/NCNN in convert model
+        and deployed</string>
+</resources>

@@ -1,0 +1,3 @@
+D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/.cxx/cmake/release/x86_64/CMakeFiles/yolov4.dir
+D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/.cxx/cmake/release/x86_64/CMakeFiles/edit_cache.dir
+D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/.cxx/cmake/release/x86_64/CMakeFiles/rebuild_cache.dir

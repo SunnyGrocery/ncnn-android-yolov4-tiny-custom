@@ -1,0 +1,194 @@
+[
+  {
+    "level": "INFO",
+    "message": "Start JSON generation. Platform version: 24 min SDK version: arm64-v8a",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Trying to locate CMake in local SDK repository.",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "- CMake found in SDK at \u0027D:\\Android\\AndroidSDK\\cmake\\3.10.2.4988404\u0027 had version \u00273.10.2\u0027",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "rebuilding JSON D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\.cxx\\cmake\\release\\arm64-v8a\\android_gradle_build.json due to:",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "- a dependent build file changed",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "  - D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "keeping json folder \u0027D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\.cxx\\cmake\\release\\arm64-v8a\u0027 but regenerating project",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "executing cmake Executable : D:\\Android\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\cmake.exe\narguments : \n-HD:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\n-DCMAKE_FIND_ROOT_PATH\u003dD:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\.cxx\\cmake\\release\\prefab\\arm64-v8a\\prefab\n-DCMAKE_BUILD_TYPE\u003dRelease\n-DCMAKE_TOOLCHAIN_FILE\u003dD:\\Android\\AndroidSDK\\ndk\\22.0.7026061\\build\\cmake\\android.toolchain.cmake\n-DANDROID_ABI\u003darm64-v8a\n-DANDROID_NDK\u003dD:\\Android\\AndroidSDK\\ndk\\22.0.7026061\n-DANDROID_PLATFORM\u003dandroid-24\n-DCMAKE_ANDROID_ARCH_ABI\u003darm64-v8a\n-DCMAKE_ANDROID_NDK\u003dD:\\Android\\AndroidSDK\\ndk\\22.0.7026061\n-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dD:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\build\\intermediates\\cmake\\release\\obj\\arm64-v8a\n-DCMAKE_MAKE_PROGRAM\u003dD:\\Android\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe\n-DCMAKE_SYSTEM_NAME\u003dAndroid\n-DCMAKE_SYSTEM_VERSION\u003d24\n-BD:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\.cxx\\cmake\\release\\arm64-v8a\n-GNinja\njvmArgs : \n\n",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "\n",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "[\u003d\u003d \"CMake Server\" \u003d\u003d[\n",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"supportedProtocolVersions\":[{\"isExperimental\":true,\"major\":1,\"minor\":1}],\"type\":\"hello\"}\n",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "]\u003d\u003d \"CMake Server\" \u003d\u003d]\n",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\n  \"type\": \"handshake\",\n  \"cookie\": \"gradle-cmake-cookie\",\n  \"protocolVersion\": {\n    \"isExperimental\": true,\n    \"major\": 1,\n    \"minor\": 1\n  },\n  \"sourceDirectory\": \"D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/src/main/cpp\",\n  \"buildDirectory\": \"D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/.cxx/cmake/release/arm64-v8a\",\n  \"generator\": \"Ninja\"\n}\n",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"gradle-cmake-cookie\",\"inReplyTo\":\"handshake\",\"type\":\"reply\"}\n",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\n  \"type\": \"configure\",\n  \"cacheArguments\": [\n    \"\",\n    \"-DCMAKE_FIND_ROOT_PATH\\u003dD:\\\\Android\\\\workSpace\\\\ncnn-android-yolov4-tiny-custom\\\\app\\\\.cxx\\\\cmake\\\\release\\\\prefab\\\\arm64-v8a\\\\prefab\",\n    \"-DCMAKE_BUILD_TYPE\\u003dRelease\",\n    \"-DCMAKE_TOOLCHAIN_FILE\\u003dD:\\\\Android\\\\AndroidSDK\\\\ndk\\\\22.0.7026061\\\\build\\\\cmake\\\\android.toolchain.cmake\",\n    \"-DANDROID_ABI\\u003darm64-v8a\",\n    \"-DANDROID_NDK\\u003dD:\\\\Android\\\\AndroidSDK\\\\ndk\\\\22.0.7026061\",\n    \"-DANDROID_PLATFORM\\u003dandroid-24\",\n    \"-DCMAKE_ANDROID_ARCH_ABI\\u003darm64-v8a\",\n    \"-DCMAKE_ANDROID_NDK\\u003dD:\\\\Android\\\\AndroidSDK\\\\ndk\\\\22.0.7026061\",\n    \"-DCMAKE_EXPORT_COMPILE_COMMANDS\\u003dON\",\n    \"-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\\u003dD:\\\\Android\\\\workSpace\\\\ncnn-android-yolov4-tiny-custom\\\\app\\\\build\\\\intermediates\\\\cmake\\\\release\\\\obj\\\\arm64-v8a\",\n    \"-DCMAKE_MAKE_PROGRAM\\u003dD:\\\\Android\\\\AndroidSDK\\\\cmake\\\\3.10.2.4988404\\\\bin\\\\ninja.exe\",\n    \"-DCMAKE_SYSTEM_NAME\\u003dAndroid\",\n    \"-DCMAKE_SYSTEM_VERSION\\u003d24\"\n  ]\n}\n",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":1000,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Configuring done\",\"type\":\"message\"}\n",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Configuring done",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"type\":\"reply\"}\n",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"type\":\"compute\"}\n",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"compute\",\"progressCurrent\":1000,\"progressMaximum\":1000,\"progressMessage\":\"Generating\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"compute\",\"message\":\"Generating done\",\"type\":\"message\"}\n",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Generating done",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"compute\",\"type\":\"reply\"}\n",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"type\":\"cmakeInputs\"}\n",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"buildFiles\":[{\"isCMake\":true,\"isTemporary\":false,\"sources\":[\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake\",\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake\"]},{\"isCMake\":false,\"isTemporary\":false,\"sources\":[\"CMakeLists.txt\",\"D:/Android/AndroidSDK/ndk/22.0.7026061/build/cmake/android.toolchain.cmake\",\"D:/Android/AndroidSDK/ndk/22.0.7026061/build/cmake/platforms.cmake\"]},{\"isCMake\":false,\"isTemporary\":true,\"sources\":[\"../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeSystem.cmake\",\"../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeCCompiler.cmake\",\"../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake\"]}],\"cmakeRootDirectory\":\"D:/Android/AndroidSDK/cmake/3.10.2.4988404/share/cmake-3.10\",\"cookie\":\"\",\"inReplyTo\":\"cmakeInputs\",\"sourceDirectory\":\"D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/src/main/cpp\",\"type\":\"reply\"}\n",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"type\":\"codemodel\"}\n",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"configurations\":[{\"name\":\"Release\",\"projects\":[{\"buildDirectory\":\"D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/.cxx/cmake/release/arm64-v8a\",\"name\":\"Project\",\"sourceDirectory\":\"D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/src/main/cpp\",\"targets\":[{\"artifacts\":[\"D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/.cxx/cmake/release/arm64-v8a/libyolov4.so\",\"D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/.cxx/cmake/release/arm64-v8a/\",\"D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/.cxx/cmake/release/arm64-v8a/libyolov4.pdb\"],\"buildDirectory\":\"D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/.cxx/cmake/release/arm64-v8a\",\"fileGroups\":[{\"compileFlags\":\"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE\u003d2 -Wformat -Werror\u003dformat-security   -fopenmp -O2 -DNDEBUG  -fPIC  \",\"defines\":[\"yolov4_EXPORTS\"],\"includePath\":[{\"path\":\"D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/src/main/cpp/ncnnvulkan/include\"}],\"isGenerated\":false,\"language\":\"CXX\",\"sources\":[\"jni_interface.cpp\",\"yolov4.cpp\"]}],\"fullName\":\"libyolov4.so\",\"linkFlags\":\"-Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -static-libstdc++ -Wl,--build-id\u003dsha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments  -static-openmp\",\"linkLibraries\":\"-llog -lvulkan -landroid -ljnigraphics D:\\\\Android\\\\workSpace\\\\ncnn-android-yolov4-tiny-custom\\\\app\\\\src\\\\main\\\\cpp\\\\ncnn\\\\arm64-v8a\\\\libncnn.a -latomic -lm\",\"linkerLanguage\":\"CXX\",\"name\":\"yolov4\",\"sourceDirectory\":\"D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/src/main/cpp\",\"sysroot\":\"D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot\",\"type\":\"SHARED_LIBRARY\"}]}]}],\"cookie\":\"\",\"inReplyTo\":\"codemodel\",\"type\":\"reply\"}\n",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "done executing cmake",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "write build output D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\.cxx\\cmake\\release\\arm64-v8a\\build_output.txt",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "write command file D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\.cxx\\cmake\\release\\arm64-v8a\\build_command.txt",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "JSON generation completed without problems",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  }
+]
