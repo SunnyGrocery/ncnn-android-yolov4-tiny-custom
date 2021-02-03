@@ -41,14 +41,14 @@ build CMakeFiles/yolov4.dir/jni_interface.cpp.o: CXX_COMPILER__yolov4 D$:/Androi
   DEFINES = -Dyolov4_EXPORTS
   DEP_FILE = CMakeFiles\yolov4.dir\jni_interface.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fopenmp -O0 -fno-limit-debug-info  -fPIC
-  INCLUDES = -ID:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/src/main/cpp/ncnnvulkan/include
+  INCLUDES = -ID:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/src/main/cpp/ncnn/include
   OBJECT_DIR = CMakeFiles\yolov4.dir
   OBJECT_FILE_DIR = CMakeFiles\yolov4.dir
 build CMakeFiles/yolov4.dir/yolov4.cpp.o: CXX_COMPILER__yolov4 D$:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/src/main/cpp/yolov4.cpp || cmake_object_order_depends_target_yolov4
   DEFINES = -Dyolov4_EXPORTS
   DEP_FILE = CMakeFiles\yolov4.dir\yolov4.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fopenmp -O0 -fno-limit-debug-info  -fPIC
-  INCLUDES = -ID:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/src/main/cpp/ncnnvulkan/include
+  INCLUDES = -ID:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/src/main/cpp/ncnn/include
   OBJECT_DIR = CMakeFiles\yolov4.dir
   OBJECT_FILE_DIR = CMakeFiles\yolov4.dir
 

@@ -3,3 +3,6 @@
 883	5728	633365494	CMakeFiles/yolov4.dir/jni_interface.cpp.o	79157497cc0a706
 49	5820	633365494	CMakeFiles/yolov4.dir/yolov4.cpp.o	e247f584afec89c7
 5821	9501	633365498	libyolov4.so	d21fb6c4529fc128
+44	1159	633374664	CMakeFiles/yolov4.dir/jni_interface.cpp.o	93755f55cc886ca1
+2	1308	633374664	CMakeFiles/yolov4.dir/yolov4.cpp.o	e00e32ae87f27a30
+1308	2154	633374665	libyolov4.so	d21fb6c4529fc128

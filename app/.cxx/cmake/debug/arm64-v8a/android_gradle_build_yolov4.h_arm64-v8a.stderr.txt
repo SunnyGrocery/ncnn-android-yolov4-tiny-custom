@@ -1,0 +1,1 @@
+ninja: error: 'D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/src/main/cpp/ncnn/arm64-v8a/include/libncnn.a', needed by 'libyolov4.h.so', missing and no known rule to make it
