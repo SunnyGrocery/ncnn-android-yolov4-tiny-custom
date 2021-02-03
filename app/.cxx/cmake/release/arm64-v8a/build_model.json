@@ -194,10 +194,7 @@
     "objFolder": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\build\\intermediates\\cmake\\release\\obj",
     "variantName": "release",
     "validAbiList": [
-      "ARMEABI_V7A",
-      "ARM64_V8A",
-      "X86",
-      "X86_64"
+      "ARM64_V8A"
     ],
     "prefabDirectory": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\.cxx\\cmake\\release\\prefab",
     "prefabPackageDirectoryList": []

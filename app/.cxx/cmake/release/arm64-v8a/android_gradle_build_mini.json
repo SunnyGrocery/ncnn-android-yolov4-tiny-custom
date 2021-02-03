@@ -15,7 +15,11 @@
       "abi": "arm64-v8a",
       "output": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\.cxx\\cmake\\release\\arm64-v8a\\libyolov4.so",
       "runtimeFiles": [
-        "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\ncnn\\arm64-v8a\\libncnn.a"
+        "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\ncnnvulkan\\arm64-v8a\\libncnn.a",
+        "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\ncnnvulkan\\arm64-v8a\\libglslang.a",
+        "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\ncnnvulkan\\arm64-v8a\\libSPIRV.a",
+        "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\ncnnvulkan\\arm64-v8a\\libOGLCompiler.a",
+        "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\ncnnvulkan\\arm64-v8a\\libOSDependent.a"
       ]
     }
   }

@@ -1,2 +1,5 @@
 # ninja log v5
 0	13	0	clean	6078b71a6cc83c3
+42	977	634076113	CMakeFiles/yolov4.dir/jni_interface.cpp.o	5b89e440ffda649c
+1	1194	634076113	CMakeFiles/yolov4.dir/yolov4.cpp.o	d9d59805b82b6eca
+1194	1518	634076113	libyolov4.so	d85c23222e5f41ad

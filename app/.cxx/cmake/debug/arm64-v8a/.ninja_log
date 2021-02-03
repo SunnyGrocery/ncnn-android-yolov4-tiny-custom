@@ -32,3 +32,7 @@
 1890	2382	634067859	libyolov4.so	f33dd2fc5ca998de
 4	2257	634067946	CMakeFiles/yolov4.dir/yolov4.cpp.o	a3a7d3ad23d529a6
 2258	2711	634067946	libyolov4.so	f33dd2fc5ca998de
+0	233	634075422	build.ninja	ba26061e9292e209
+41	1138	634075423	CMakeFiles/yolov4.dir/jni_interface.cpp.o	8c7e6b13c6bf89ef
+0	1252	634075423	CMakeFiles/yolov4.dir/yolov4.cpp.o	a3a7d3ad23d529a6
+1253	1559	634075423	libyolov4.so	f33dd2fc5ca998de

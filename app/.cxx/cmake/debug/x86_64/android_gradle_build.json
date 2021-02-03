@@ -1,7 +1,7 @@
 {
   "stringTable": {
     "0": "D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/.cxx/cmake/debug/x86_64",
-    "1": "--target=x86_64-none-linux-android24 --gcc-toolchain=D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dyolov4_EXPORTS -ID:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/src/main/cpp/ncnn/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fopenmp -O0 -fno-limit-debug-info -fPIC"
+    "1": "--target=x86_64-none-linux-android24 --gcc-toolchain=D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dyolov4_EXPORTS -ID:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/src/main/cpp/ncnnvulkan/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fopenmp -O0 -fno-limit-debug-info -fPIC"
   },
   "buildFiles": [
     "D:\\Android\\AndroidSDK\\ndk\\22.0.7026061\\build\\cmake\\android.toolchain.cmake",
@@ -34,7 +34,11 @@
       "headers": [],
       "output": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\.cxx\\cmake\\debug\\x86_64\\libyolov4.so",
       "runtimeFiles": [
-        "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\ncnn\\x86_64\\libncnn.a"
+        "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\ncnnvulkan\\x86_64\\libncnn.a",
+        "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\ncnnvulkan\\x86_64\\libglslang.a",
+        "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\ncnnvulkan\\x86_64\\libSPIRV.a",
+        "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\ncnnvulkan\\x86_64\\libOGLCompiler.a",
+        "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\ncnnvulkan\\x86_64\\libOSDependent.a"
       ]
     }
   },
