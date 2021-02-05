@@ -7,12 +7,12 @@ import java.util.Random;
 
 public class Box {
     public float x0, y0, x1, y1;
-    private int label;
-    private float score;
+    private final int label;
+    private final float score;
     /**
      * 检测人脸，判断是否佩戴口罩
      */
-    private static String[] labels = {"nomask", "masked"};
+    private static final String[] labels = {"nomask", "masked"};
 
     public Box(float x0, float y0, float x1, float y1, int label, float score) {
         this.x0 = x0;
@@ -36,7 +36,9 @@ public class Box {
     }
 
     public int getColor() {
-        Random random = new Random(label);
-        return Color.argb(255, random.nextInt(256), random.nextInt(256), random.nextInt(256));
+        if (label == 0) {
+            return Color.argb(255, 220, 20, 60);
+        }
+        return Color.argb(255, 50, 205, 50);
     }
 }

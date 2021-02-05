@@ -23,25 +23,32 @@ typedef struct BoxInfo {
     float y2;
     float score;
     int label;
+
 } BoxInfo;
 
 class yolov4 {
 public:
-    yolov4(AAssetManager *mgr, const char *param, const char *bin);
+    yolov4(AAssetManager *mgr, const char *param, const char *bin, bool useGPU);
 
     ~yolov4();
 
-    std::vector<BoxInfo> detect(JNIEnv *env, jobject image);
+    std::vector<BoxInfo> detect(JNIEnv *env, jobject image, float threshold, float nms_threshold);
 
     std::vector<std::string> labels{"nomask", "masked"};
 private:
-    static std::vector<BoxInfo> decode_infer(ncnn::Mat &data, const cv::Size &frame_size);
+    static std::vector<BoxInfo> decode_infer(ncnn::Mat &data, const cv::Size &frame_size, float threshold);
 
     ncnn::Net *Net;
     int input_size = 416;
+
+    static void nms(std::vector<BoxInfo> &input_boxes, float NMS_THRESH);
+
 public:
     static yolov4 *detector;
     static bool hasGPU;
+    static bool toUseGPU;
+
+
 };
 
 

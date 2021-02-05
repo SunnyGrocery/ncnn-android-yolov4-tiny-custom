@@ -204,8 +204,8 @@ CMAKE_SYSTEM_NAME:UNINITIALIZED=Android
 //No help, variable specified on the command line.
 CMAKE_SYSTEM_VERSION:UNINITIALIZED=24
 
-//No help, variable specified on the command line.
-CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=D:\Android\AndroidSDK\ndk\22.0.7026061\build\cmake\android.toolchain.cmake
+//The CMake toolchain file
+CMAKE_TOOLCHAIN_FILE:FILEPATH=D:/Android/AndroidSDK/ndk/22.0.7026061/build/cmake/android.toolchain.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -213,108 +213,11 @@ CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=D:\Android\AndroidSDK\ndk\22.0.7026061\build\
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//root for library output, set this to change where android libs
-// are compiled to
-LIBRARY_OUTPUT_PATH_ROOT:PATH=D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/.cxx/cmake/debug/arm64-v8a
-
-//optimize aarch64 platform with armv8.2
-NCNN_ARM82:BOOL=ON
-
-//print benchmark information for every layer
-NCNN_BENCHMARK:BOOL=OFF
-
-//build benchmark
-NCNN_BUILD_BENCHMARK:BOOL=ON
-
-//build examples
-NCNN_BUILD_EXAMPLES:BOOL=OFF
-
-//build tests
-NCNN_BUILD_TESTS:BOOL=OFF
-
-//build tools
-NCNN_BUILD_TOOLS:BOOL=OFF
-
-//print verbose cmake messages
-NCNN_CMAKE_VERBOSE:BOOL=OFF
-
-//build for coverage
-NCNN_COVERAGE:BOOL=OFF
-
-//disable exception
-NCNN_DISABLE_EXCEPTION:BOOL=ON
-
-//disable position-independent code
-NCNN_DISABLE_PIC:BOOL=OFF
-
-//disable rtti
-NCNN_DISABLE_RTTI:BOOL=ON
-
-//enable link-time optimization
-NCNN_ENABLE_LTO:BOOL=OFF
-
-//install ncnn library and headers
-NCNN_INSTALL_SDK:BOOL=ON
-
-//openmp support
-NCNN_OPENMP:BOOL=ON
-
-//convert and resize from/to image pixel
-NCNN_PIXEL:BOOL=ON
-
-//warp affine image pixel
-NCNN_PIXEL_AFFINE:BOOL=ON
-
-//rotate image pixel orientation
-NCNN_PIXEL_ROTATE:BOOL=ON
-
-//build with platform api candy
-NCNN_PLATFORM_API:BOOL=ON
-
-//build python api
-NCNN_PYTHON:BOOL=OFF
-
-//auto merge int8 quant and dequant
-NCNN_REQUANT:BOOL=OFF
-
-//runtime dispatch cpu routines
-NCNN_RUNTIME_CPU:BOOL=ON
-
-//shared library support
-NCNN_SHARED_LIB:BOOL=OFF
-
-//minimal opencv structure emulation
-NCNN_SIMPLEOCV:BOOL=OFF
-
-//minimal openmp runtime emulation
-NCNN_SIMPLEOMP:BOOL=OFF
-
-//minimal cpp stl structure emulation
-NCNN_SIMPLESTL:BOOL=OFF
-
-//load model from external file
-NCNN_STDIO:BOOL=ON
-
-//plain and verbose string
-NCNN_STRING:BOOL=ON
-
-//use system glslang library
-NCNN_SYSTEM_GLSLANG:BOOL=OFF
-
-//build with threads
-NCNN_THREADS:BOOL=ON
-
-//vulkan compute support
-NCNN_VULKAN:BOOL=OFF
-
 //Value Computed by CMake
 Project_BINARY_DIR:STATIC=D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/.cxx/cmake/debug/arm64-v8a
 
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/src/main/cpp
-
-//Dependencies for the target
-YOLOv4ByNCNN_LIB_DEPENDS:STATIC=general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/liblog.so;general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libvulkan.so;general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libandroid.so;general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libjnigraphics.so;general;ncnn;
 
 //Path to a library.
 android-lib:FILEPATH=D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libandroid.so
@@ -325,26 +228,11 @@ jnigraphics-lib:FILEPATH=D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/
 //Path to a library.
 log-lib:FILEPATH=D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/liblog.so
 
-//Value Computed by CMake
-ncnn_BINARY_DIR:STATIC=D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/.cxx/cmake/debug/arm64-v8a
-
-//Value Computed by CMake
-ncnn_SOURCE_DIR:STATIC=D:/Android/workSpace/ncnn-android-yolov4-tiny-custom/app/src/main/cpp
-
 //Path to a library.
 vulkan-lib:FILEPATH=D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libvulkan.so
 
 //Dependencies for the target
-yolov4.h_LIB_DEPENDS:STATIC=general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/liblog.so;general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libvulkan.so;general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libandroid.so;general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libjnigraphics.so;general;ncnn;
-
-//Dependencies for the target
 yolov4_LIB_DEPENDS:STATIC=general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/liblog.so;general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libvulkan.so;general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libandroid.so;general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libjnigraphics.so;general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/liblog.so;general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libvulkan.so;general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libandroid.so;general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libjnigraphics.so;general;ncnn;general;glslang;general;SPIRV;general;OGLCompiler;general;OSDependent;
-
-//Dependencies for the target
-yolov4_tiny_LIB_DEPENDS:STATIC=general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/liblog.so;general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libvulkan.so;general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libandroid.so;general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libjnigraphics.so;general;ncnn;
-
-//Dependencies for the target
-yolov5_LIB_DEPENDS:STATIC=general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/liblog.so;general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libvulkan.so;general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libandroid.so;general;D:/Android/AndroidSDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libjnigraphics.so;general;ncnn;
 
 
 ########################

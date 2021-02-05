@@ -2,6 +2,7 @@ package top.sun1999;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.camera.core.CameraX;
 import androidx.camera.core.ImageAnalysis;
@@ -11,7 +12,6 @@ import androidx.camera.core.Preview;
 import androidx.camera.core.PreviewConfig;
 import androidx.camera.core.UseCase;
 import androidx.core.app.ActivityCompat;
-import androidx.lifecycle.LifecycleOwner;
 
 import android.Manifest;
 import android.content.Intent;
@@ -24,6 +24,7 @@ import android.graphics.ImageFormat;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.graphics.Typeface;
 import android.graphics.YuvImage;
 import android.media.ExifInterface;
 import android.net.Uri;
@@ -31,11 +32,10 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 
 import android.util.Size;
-import android.view.TextureView;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.core.content.ContextCompat;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -44,37 +44,39 @@ import java.util.Locale;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class MainActivity extends AppCompatActivity {
-    private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static final int REQUEST_PICK_IMAGE = 2;
-    private static String[] PERMISSIONS_STORAGE = {
+    private static final String[] PERMISSIONS = {
             Manifest.permission.READ_EXTERNAL_STORAGE,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE
+            Manifest.permission.CAMERA
     };
     private ImageView resultImageView;
 
     private TextView thresholdTextview;
     private TextView tvInfo;
-    private double threshold = 0.3, nms_threshold = 0.7;
-    private TextureView viewFinder;
+    private final double threshold = 0.35;
+    private final double nms_threshold = 0.7;
 
-    private AtomicBoolean detecting = new AtomicBoolean(false);
-    private AtomicBoolean detectPhoto = new AtomicBoolean(false);
+    private final AtomicBoolean detecting = new AtomicBoolean(false);
+    private final AtomicBoolean detectPhoto = new AtomicBoolean(false);
 
     private long startTime = 0;
     private long endTime = 0;
     private int width;
     private int height;
+    private static final Paint boxPaint = new Paint();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-        ActivityCompat.requestPermissions(this,
-                new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,
-                        Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA},
-                1);
-
+        ActivityCompat.requestPermissions(this, PERMISSIONS, PackageManager.PERMISSION_GRANTED);
+        while ((ContextCompat.checkSelfPermission(this.getApplicationContext(), PERMISSIONS[0]) == PackageManager.PERMISSION_DENIED
+                || ContextCompat.checkSelfPermission(this.getApplicationContext(), PERMISSIONS[1]) == PackageManager.PERMISSION_DENIED)) {
+            try {
+                wait(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
         setContentView(R.layout.activity_main);
         YOLOv4.init(getAssets());
         resultImageView = findViewById(R.id.imageView);
@@ -85,21 +87,13 @@ public class MainActivity extends AppCompatActivity {
         thresholdTextview.setText(String.format(Locale.ENGLISH, format, threshold, nms_threshold));
 
         Button inference = findViewById(R.id.button);
-        inference.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_PICK);
-                intent.setType("image/*");
-                startActivityForResult(intent, REQUEST_PICK_IMAGE);
-            }
+        inference.setOnClickListener(view -> {
+            Intent intent = new Intent(Intent.ACTION_PICK);
+            intent.setType("image/*");
+            startActivityForResult(intent, REQUEST_PICK_IMAGE);
         });
 
-        resultImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                detectPhoto.set(false);
-            }
-        });
+        resultImageView.setOnClickListener(v -> detectPhoto.set(false));
         startCamera();
 
     }
@@ -116,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
         Preview preview = new Preview(previewConfig);
         DetectAnalyzer detectAnalyzer = new DetectAnalyzer();
-        CameraX.bindToLifecycle((LifecycleOwner) this, preview, gainAnalyzer(detectAnalyzer));
+        CameraX.bindToLifecycle(this, preview, gainAnalyzer(detectAnalyzer));
 
     }
 
@@ -132,53 +126,53 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private class DetectAnalyzer implements ImageAnalysis.Analyzer {
-
         @Override
         public void analyze(ImageProxy image, final int rotationDegrees) {
             if (detecting.get() || detectPhoto.get()) {
                 return;
             }
             detecting.set(true);
-            startTime = System.currentTimeMillis();
             final Bitmap bitmapsrc = imageToBitmap(image);  // 格式转换
-            Thread detectThread = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    Matrix matrix = new Matrix();
-                    matrix.postRotate(rotationDegrees);
-                    width = bitmapsrc.getWidth();
-                    height = bitmapsrc.getHeight();
-                    Bitmap bitmap = Bitmap.createBitmap(bitmapsrc, 0, 0, width, height, matrix, false);
+            Thread detectThread = new Thread(() -> {
+                Matrix matrix = new Matrix();
+                matrix.postRotate(rotationDegrees);
+                width = bitmapsrc.getWidth();
+                height = bitmapsrc.getHeight();
+                Bitmap bitmap = Bitmap.createBitmap(bitmapsrc, 0, 0, width, height, matrix, false);
 
-                    Box[] result = YOLOv4.detect(bitmap, threshold, nms_threshold);
-                    final Bitmap mutableBitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true);
-                    Canvas canvas = new Canvas(mutableBitmap);
-                    final Paint boxPaint = new Paint();
-                    boxPaint.setAlpha(200);
+                startTime = System.currentTimeMillis();
+                Box[] result = YOLOv4.detect(bitmap, threshold, nms_threshold);
+                endTime = System.currentTimeMillis();
+
+                final Bitmap mutableBitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true);
+                float strokeWidth = 4 * (float) mutableBitmap.getWidth() / 800;
+                float textSize = 30 * (float) mutableBitmap.getWidth() / 800;
+
+                Canvas canvas = new Canvas(mutableBitmap);
+                boxPaint.setAlpha(255);
+                boxPaint.setTypeface(Typeface.SANS_SERIF);
+                boxPaint.setStyle(Paint.Style.STROKE);
+                boxPaint.setStrokeWidth(strokeWidth);
+                boxPaint.setTextSize(textSize);
+                for (Box box : result) {
+                    boxPaint.setColor(box.getColor());
+                    boxPaint.setStyle(Paint.Style.FILL);
+                    String score = Integer.toString((int) (box.getScore() * 100));
+                    canvas.drawText(box.getLabel() + " [" + score + "%]",
+                            box.x0 - strokeWidth, box.y0 - strokeWidth
+                            , boxPaint);
                     boxPaint.setStyle(Paint.Style.STROKE);
-                    boxPaint.setStrokeWidth(4 * mutableBitmap.getWidth() / 800);
-                    boxPaint.setTextSize(40 * mutableBitmap.getWidth() / 800);
-                    for (Box box : result) {
-                        boxPaint.setColor(box.getColor());
-                        boxPaint.setStyle(Paint.Style.FILL);
-                        canvas.drawText(box.getLabel(), box.x0 + 3, box.y0 + 40 * mutableBitmap.getWidth() / 1000, boxPaint);
-                        boxPaint.setStyle(Paint.Style.STROKE);
-                        canvas.drawRect(box.getRect(), boxPaint);
-                    }
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            resultImageView.setImageBitmap(mutableBitmap);
-                            detecting.set(false);
-                            endTime = System.currentTimeMillis();
-                            long dur = endTime - startTime;
-                            float fps = (float) (1000.0 / dur);
-                            tvInfo.setText(String.format(Locale.CHINESE,
-                                    "Size: %dx%d\nTime: %.3f s\nFPS: %.3f",
-                                    height, width, dur / 1000.0, fps));
-                        }
-                    });
+                    canvas.drawRect(box.getRect(), boxPaint);
                 }
+                runOnUiThread(() -> {
+                    resultImageView.setImageBitmap(mutableBitmap);
+                    detecting.set(false);
+                    long dur = endTime - startTime;
+                    float fps = (float) (1000.0 / dur);
+                    tvInfo.setText(String.format(Locale.CHINESE,
+                            "ImgSize: %dx%d\nUseTime: %d ms\nDetectFPS: %.2f",
+                            height, width, dur, fps));
+                });
             }, "detect");
             detectThread.start();
         }
@@ -236,22 +230,38 @@ public class MainActivity extends AppCompatActivity {
         }
         detectPhoto.set(true);
         Bitmap image = getPicture(data.getData());
+
+        startTime = System.currentTimeMillis();
         Box[] result = YOLOv4.detect(image, threshold, nms_threshold);
-        Bitmap mutableBitmap = image.copy(Bitmap.Config.ARGB_8888, true);
+        endTime = System.currentTimeMillis();
+
+        final Bitmap mutableBitmap = image.copy(Bitmap.Config.ARGB_8888, true);
+        float strokeWidth = 4 * (float) mutableBitmap.getWidth() / 800;
+        float textSize = 30 * (float) mutableBitmap.getWidth() / 800;
+
         Canvas canvas = new Canvas(mutableBitmap);
-        final Paint boxPaint = new Paint();
-        boxPaint.setAlpha(200);
+        boxPaint.setAlpha(255);
+        boxPaint.setTypeface(Typeface.SANS_SERIF);
         boxPaint.setStyle(Paint.Style.STROKE);
-        boxPaint.setStrokeWidth(4 * image.getWidth() / 800);
-        boxPaint.setTextSize(40 * image.getWidth() / 800);
+        boxPaint.setStrokeWidth(strokeWidth);
+        boxPaint.setTextSize(textSize);
         for (Box box : result) {
             boxPaint.setColor(box.getColor());
             boxPaint.setStyle(Paint.Style.FILL);
-            canvas.drawText(box.getLabel(), box.x0 + 3, box.y0 + 17, boxPaint);
+            String score = Integer.toString((int) (box.getScore() * 100));
+            canvas.drawText(box.getLabel() + " [" + score + "%]",
+                    box.x0 - strokeWidth, box.y0 - strokeWidth
+                    , boxPaint);
             boxPaint.setStyle(Paint.Style.STROKE);
             canvas.drawRect(box.getRect(), boxPaint);
         }
         resultImageView.setImageBitmap(mutableBitmap);
+        detecting.set(false);
+        long dur = endTime - startTime;
+        tvInfo.setText(String.format(Locale.CHINESE,
+                "ImgSize: %dx%d\nUseTime: %d ms\n",
+                height, width, dur));
+
     }
 
     public Bitmap getPicture(Uri selectedImage) {
@@ -289,14 +299,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public Bitmap rotateBitmapByDegree(Bitmap bm, int degree) {
-        Bitmap returnBm = null;
         Matrix matrix = new Matrix();
         matrix.postRotate(degree);
-        try {
-            returnBm = Bitmap.createBitmap(bm, 0, 0, bm.getWidth(),
-                    bm.getHeight(), matrix, true);
-        } catch (OutOfMemoryError e) {
-        }
+
+        Bitmap returnBm = Bitmap.createBitmap(bm, 0, 0, bm.getWidth(),
+                bm.getHeight(), matrix, true);
+
         if (returnBm == null) {
             returnBm = bm;
         }
