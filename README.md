@@ -23,7 +23,7 @@
 
 ### Example
 
-![](D:\Android\workSpace\ncnn-android-yolov4-tiny-custom\sample.gif)
+![](.\sample.gif)
 
 ---
 
