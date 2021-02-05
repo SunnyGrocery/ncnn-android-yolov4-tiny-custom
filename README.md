@@ -23,7 +23,7 @@
 
 ### Example
 
-![](.\sample.gif)
+![img](.\sample.gif)
 
 ---
 
