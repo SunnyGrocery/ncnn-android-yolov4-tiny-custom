@@ -35,6 +35,7 @@ import android.util.Size;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.core.content.ContextCompat;
 
 import java.io.ByteArrayOutputStream;
@@ -245,22 +246,29 @@ public class MainActivity extends AppCompatActivity {
         boxPaint.setStyle(Paint.Style.STROKE);
         boxPaint.setStrokeWidth(strokeWidth);
         boxPaint.setTextSize(textSize);
+        int scoreAvg = 0;
         for (Box box : result) {
+            int score = (int) (box.getScore() * 100);
+            scoreAvg += score;
+
             boxPaint.setColor(box.getColor());
             boxPaint.setStyle(Paint.Style.FILL);
-            String score = Integer.toString((int) (box.getScore() * 100));
+
             canvas.drawText(box.getLabel() + " [" + score + "%]",
                     box.x0 - strokeWidth, box.y0 - strokeWidth
                     , boxPaint);
             boxPaint.setStyle(Paint.Style.STROKE);
             canvas.drawRect(box.getRect(), boxPaint);
         }
+        if (result.length != 0) {
+            scoreAvg = scoreAvg / result.length;
+        }
         resultImageView.setImageBitmap(mutableBitmap);
         detecting.set(false);
         long dur = endTime - startTime;
         tvInfo.setText(String.format(Locale.CHINESE,
-                "ImgSize: %dx%d\nUseTime: %d ms\n",
-                height, width, dur));
+                "ImgSize: %dx%d\nUseTime: %d ms\nAvgMatchScore: %d%%",
+                height, width, dur, scoreAvg));
 
     }
 

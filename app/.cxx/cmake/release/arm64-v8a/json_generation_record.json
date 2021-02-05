@@ -13,6 +13,126 @@
   },
   {
     "level": "INFO",
+    "message": "Parsing D:\\Android\\AndroidSDK\\build-tools\\29.0.2\\package.xml",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\Android\\AndroidSDK\\build-tools\\29.0.3\\package.xml",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\Android\\AndroidSDK\\build-tools\\30.0.3\\package.xml",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\Android\\AndroidSDK\\cmake\\3.10.2.4988404\\package.xml",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\Android\\AndroidSDK\\cmdline-tools\\latest\\package.xml",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\Android\\AndroidSDK\\emulator\\package.xml",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\Android\\AndroidSDK\\extras\\google\\auto\\package.xml",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\Android\\AndroidSDK\\extras\\google\\simulators\\package.xml",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\Android\\AndroidSDK\\extras\\google\\usb_driver\\package.xml",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\Android\\AndroidSDK\\extras\\google\\webdriver\\package.xml",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\Android\\AndroidSDK\\ndk\\22.0.7026061\\package.xml",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\Android\\AndroidSDK\\patcher\\v4\\package.xml",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\Android\\AndroidSDK\\platform-tools\\package.xml",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\Android\\AndroidSDK\\platforms\\android-24\\package.xml",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\Android\\AndroidSDK\\platforms\\android-28\\package.xml",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\Android\\AndroidSDK\\platforms\\android-29\\package.xml",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\Android\\AndroidSDK\\platforms\\android-30\\package.xml",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\Android\\AndroidSDK\\sources\\android-29\\package.xml",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\Android\\AndroidSDK\\sources\\android-30\\package.xml",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\Android\\AndroidSDK\\tools\\package.xml",
+    "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
     "message": "- CMake found in SDK at \u0027D:\\Android\\AndroidSDK\\cmake\\3.10.2.4988404\u0027 had version \u00273.10.2\u0027",
     "file": "D:\\Android\\workSpace\\ncnn-android-yolov4-tiny-custom\\app\\src\\main\\cpp\\CMakeLists.txt",
     "tag": "release|arm64-v8a"
