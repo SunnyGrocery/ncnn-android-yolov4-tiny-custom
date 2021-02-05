@@ -19,7 +19,7 @@
 + You need install Android SDK , Android NDK and CMake additional in Android Studio.
 ### Enjoy it!
 
-+ [releases](https://github.com/SunnyGrocery/ncnn-android-yolov4-tiny-custom/releases/latest) （In order to reduce .apk size,  apk retain the environment of  `arm64` only.)
++ [releases](https://github.com/SunnyGrocery/ncnn-android-yolov4-tiny-custom/releases) （In order to reduce .apk size,  apk retain the environment of  `arm64` only.)
 
 ### Example
 
