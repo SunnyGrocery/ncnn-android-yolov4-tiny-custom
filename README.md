@@ -9,7 +9,7 @@ APP对人脸是否佩戴口罩进行目标检测，模型使用darknet实现的Y
 
 ### Enjoy it:
 
-+ [releases](https://github.com/SunnyGrocery/ncnn-android-yolov4-tiny-custom/releases) （为了减少体积，apk打包只保留了`arm64`环境）
++ [releases](https://github.com/SunnyGrocery/ncnn-android-yolov4-tiny-custom/releases/latest) （为了减少体积，apk打包只保留了`arm64`环境）
 
 ---
 
