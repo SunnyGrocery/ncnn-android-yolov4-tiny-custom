@@ -44,19 +44,6 @@ yolov4::detect(JNIEnv *env, jobject image, float threshold, float nms_threshold)
     return result;
 }
 
-inline float fast_exp(float x) {
-    union {
-        uint32_t i;
-        float f;
-    } v{};
-    v.i = (1 << 23) * (1.4426950409 * x + 126.93490512f);
-    return v.f;
-}
-
-inline float sigmoid(float x) {
-    return 1.0f / (1.0f + fast_exp(-x));
-}
-
 std::vector<BoxInfo>
 yolov4::decode_infer(ncnn::Mat &data, const cv::Size &frame_size, float threshold) {
     std::vector<BoxInfo> result;
@@ -67,7 +54,7 @@ yolov4::decode_infer(ncnn::Mat &data, const cv::Size &frame_size, float threshol
         box.y1 = values[3] * (float) frame_size.height;
         box.x2 = values[4] * (float) frame_size.width;
         box.y2 = values[5] * (float) frame_size.height;
-        box.label = values[0] - 1;
+        box.label = (int) values[0] - 1;
         box.score = values[1];
         if (box.score < threshold) {
             continue;

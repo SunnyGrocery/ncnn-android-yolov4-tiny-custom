@@ -2,7 +2,6 @@ package top.sun1999;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.camera.core.CameraX;
 import androidx.camera.core.ImageAnalysis;
@@ -20,6 +19,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.ImageFormat;
 import android.graphics.Matrix;
 import android.graphics.Paint;
@@ -41,8 +41,13 @@ import androidx.core.content.ContextCompat;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.atomic.AtomicBoolean;
+
+import static java.lang.Math.max;
+import static java.lang.Math.pow;
 
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_PICK_IMAGE = 2;
@@ -105,7 +110,6 @@ public class MainActivity extends AppCompatActivity {
 
         PreviewConfig previewConfig = new PreviewConfig.Builder()
                 .setLensFacing(CameraX.LensFacing.BACK)
-
                 .setTargetResolution(new Size(416, 416))  // 分辨率
                 .build();
 
@@ -155,6 +159,8 @@ public class MainActivity extends AppCompatActivity {
                 boxPaint.setStyle(Paint.Style.STROKE);
                 boxPaint.setStrokeWidth(strokeWidth);
                 boxPaint.setTextSize(textSize);
+                List<Box> nomaskBox = new ArrayList<>();
+                float imageArea = width * height;
                 for (Box box : result) {
                     boxPaint.setColor(box.getColor());
                     boxPaint.setStyle(Paint.Style.FILL);
@@ -164,7 +170,22 @@ public class MainActivity extends AppCompatActivity {
                             , boxPaint);
                     boxPaint.setStyle(Paint.Style.STROKE);
                     canvas.drawRect(box.getRect(), boxPaint);
+                    if ("masked".equals(box.getLabel())) {
+                        continue;
+                    }
+                    float boxArea = (box.x1 - box.x0) * (box.y1 - box.y0);
+                    if (boxArea / imageArea > 0.3) {
+                        continue;
+                    }
+                    nomaskBox.add(box);
                 }
+
+                List<Float[]> dangerousLineMatrix = calDistance(nomaskBox);
+                boxPaint.setColor(Color.argb(255, 255, 165, 0));
+                for (Float[] location : dangerousLineMatrix) {
+                    canvas.drawLine(location[0], location[1], location[2], location[3], boxPaint);
+                }
+
                 runOnUiThread(() -> {
                     resultImageView.setImageBitmap(mutableBitmap);
                     detecting.set(false);
@@ -231,7 +252,6 @@ public class MainActivity extends AppCompatActivity {
         }
         detectPhoto.set(true);
         Bitmap image = getPicture(data.getData());
-
         startTime = System.currentTimeMillis();
         Box[] result = YOLOv4.detect(image, threshold, nms_threshold);
         endTime = System.currentTimeMillis();
@@ -239,13 +259,14 @@ public class MainActivity extends AppCompatActivity {
         final Bitmap mutableBitmap = image.copy(Bitmap.Config.ARGB_8888, true);
         float strokeWidth = 4 * (float) mutableBitmap.getWidth() / 800;
         float textSize = 30 * (float) mutableBitmap.getWidth() / 800;
-
         Canvas canvas = new Canvas(mutableBitmap);
         boxPaint.setAlpha(255);
         boxPaint.setTypeface(Typeface.SANS_SERIF);
         boxPaint.setStyle(Paint.Style.STROKE);
         boxPaint.setStrokeWidth(strokeWidth);
         boxPaint.setTextSize(textSize);
+
+
         int scoreAvg = 0;
         for (Box box : result) {
             int score = (int) (box.getScore() * 100);
@@ -253,13 +274,32 @@ public class MainActivity extends AppCompatActivity {
 
             boxPaint.setColor(box.getColor());
             boxPaint.setStyle(Paint.Style.FILL);
-
             canvas.drawText(box.getLabel() + " [" + score + "%]",
                     box.x0 - strokeWidth, box.y0 - strokeWidth
                     , boxPaint);
             boxPaint.setStyle(Paint.Style.STROKE);
             canvas.drawRect(box.getRect(), boxPaint);
         }
+
+        //距离计算
+        List<Box> nomaskBox = new ArrayList<>();
+        float imageArea = image.getWidth() * image.getHeight();
+        for (Box box : result) {
+            if ("masked".equals(box.getLabel())) {
+                continue;
+            }
+            float boxArea = (box.x1 - box.x0) * (box.y1 - box.y0);
+            if (boxArea / imageArea > 0.3) {
+                continue;
+            }
+            nomaskBox.add(box);
+        }
+        List<Float[]> dangerousLineMatrix = calDistance(nomaskBox);
+        boxPaint.setColor(Color.argb(255, 255, 165, 0));
+        for (Float[] location : dangerousLineMatrix) {
+            canvas.drawLine(location[0], location[1], location[2], location[3], boxPaint);
+        }
+
         if (result.length != 0) {
             scoreAvg = scoreAvg / result.length;
         }
@@ -270,6 +310,38 @@ public class MainActivity extends AppCompatActivity {
                 "ImgSize: %dx%d\nUseTime: %d ms\nAvgMatchScore: %d%%",
                 height, width, dur, scoreAvg));
 
+    }
+
+    static double DisRatioBox = 3;
+
+    private ArrayList<Float[]> calDistance(List<Box> element) {
+        ArrayList<Float[]> dangerousLineMatrix = new ArrayList<>();
+
+        for (int i = 0; i < element.size(); i++) {
+            Box box = element.get(i);
+            float centerX = (box.x0 + box.x1) / 2;
+            float centerY = (box.y0 + box.y1) / 2;
+            float boxArea = (box.x1 - box.x0) * (box.y1 - box.y0);
+            for (int j = i + 1; j < element.size(); j++) {
+                Box nowBox = element.get(j);
+                float nowBoxArea = (nowBox.x1 - nowBox.x0) * (nowBox.y1 - nowBox.y0);
+                float maxArea = Math.max(nowBoxArea, boxArea);
+                if (Math.abs(nowBoxArea - boxArea) / maxArea > 0.3) {
+                    continue;
+                }
+                float nowCenterX = (nowBox.x0 + nowBox.x1) / 2;
+                float nowCenterY = (nowBox.y0 + nowBox.y1) / 2;
+                double pixelDistance = Math.sqrt(pow(nowCenterX - centerX, 2) + pow(nowCenterY - centerY, 2));
+                double realRatio = pixelDistance / (nowBox.y1 - nowBox.y0);
+                //safe distance
+                if (realRatio > DisRatioBox) {
+                    continue;
+                }
+                //dangerous
+                dangerousLineMatrix.add(new Float[]{centerX, centerY, nowCenterX, nowCenterY,});
+            }
+        }
+        return dangerousLineMatrix;
     }
 
     public Bitmap getPicture(Uri selectedImage) {
@@ -310,8 +382,7 @@ public class MainActivity extends AppCompatActivity {
         Matrix matrix = new Matrix();
         matrix.postRotate(degree);
 
-        Bitmap returnBm = Bitmap.createBitmap(bm, 0, 0, bm.getWidth(),
-                bm.getHeight(), matrix, true);
+        Bitmap returnBm = Bitmap.createBitmap(bm, 0, 0, bm.getWidth(), bm.getHeight(), matrix, true);
 
         if (returnBm == null) {
             returnBm = bm;

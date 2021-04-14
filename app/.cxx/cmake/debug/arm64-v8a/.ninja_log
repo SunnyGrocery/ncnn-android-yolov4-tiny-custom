@@ -2,3 +2,5 @@
 66	2200	634215618	CMakeFiles/yolov4.dir/jni_interface.cpp.o	8c7e6b13c6bf89ef
 1	2366	634215618	CMakeFiles/yolov4.dir/yolov4.cpp.o	a3a7d3ad23d529a6
 2366	3396	634215619	libyolov4.so	f33dd2fc5ca998de
+21	4058	639912264	CMakeFiles/yolov4.dir/yolov4.cpp.o	a3a7d3ad23d529a6
+4058	9424	639912269	libyolov4.so	f33dd2fc5ca998de
