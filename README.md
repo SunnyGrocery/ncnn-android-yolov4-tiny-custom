@@ -11,7 +11,7 @@
 + 模型在darknet上训练；
 + 数据集包含12,373 张图片，训练集与测试集比例为8:2；
 + 使用yolov4-tiny，并在[yolov4-tiny.conv.29](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.conv.29)上进行预训练；
-+ 通过NCNN完成模型转换与安卓平台部署，可在Android端调用摄像头实时检测，可达60FPS。
++ 通过NCNN完成模型转换与安卓平台部署，可在Android端调用摄像头实时检测，在骁龙865设备上可达20FPS。
 
 ### Build
 
