@@ -46,7 +46,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import static java.lang.Math.max;
 import static java.lang.Math.pow;
 
 public class MainActivity extends AppCompatActivity {

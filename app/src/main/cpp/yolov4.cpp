@@ -9,9 +9,9 @@ yolov4::yolov4(AAssetManager *mgr, const char *param, const char *bin, bool useG
     toUseGPU = hasGPU && useGPU;
 
     Net = new ncnn::Net();
-    // opt 需要在加载前设置
-    Net->opt.use_vulkan_compute = toUseGPU;  // gpu
-    Net->opt.use_fp16_arithmetic = true;  // fp16运算加速
+
+    Net->opt.use_vulkan_compute = toUseGPU;  // GPU
+    Net->opt.use_fp16_arithmetic = true;  // FP16运算加速
     Net->load_param(mgr, param);
     Net->load_model(mgr, bin);
 }
@@ -43,7 +43,13 @@ yolov4::detect(JNIEnv *env, jobject image, float threshold, float nms_threshold)
     nms(result, nms_threshold);
     return result;
 }
-
+/**
+ * 从Mat->data值求bbox的实际参数值
+ * @param data
+ * @param frame_size
+ * @param threshold
+ * @return
+ */
 std::vector<BoxInfo>
 yolov4::decode_infer(ncnn::Mat &data, const cv::Size &frame_size, float threshold) {
     std::vector<BoxInfo> result;
